@@ -13,15 +13,9 @@ public class ProductRepository {
         // //вызывайте метод findById
         int id = item.getId();
         if (findById(id) == null) {
-
             // создаём новый массив
             int length = items.length + 1;
             Product[] tmp = new Product[length];
-            // itar+tab
-            // копируем поэлементно
-            //        for (int i = 0; i < items.length; i++) {
-            //            tmp[i] = items[i];
-            //        }
             System.arraycopy(items, 0, tmp, 0, items.length);
             // закладываем последним наш элемент
             int lastIndex = tmp.length - 1;
